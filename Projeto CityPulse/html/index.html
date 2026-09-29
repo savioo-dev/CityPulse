@@ -1,0 +1,133 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CityPulse</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <header class="site-header">
+        <h1>CityPulse</h1>
+
+        <nav aria-label="Navegação principal">
+            <a href="#">Início</a>
+            <a href="#">Explorar</a>
+            <a href="#">Categorias</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section
+            class="hero"
+            aria-labelledby="hero-title"
+        >
+            <h2 id="hero-title">
+                Descubra lugares pela cidade
+            </h2>
+
+            <p>
+                Encontre cafés, espaços de trabalho, parques e lugares interessantes perto de você.
+            </p>
+
+            <form
+                class="search"
+                id="search-form"
+            >
+                <label
+                    for="search-input"
+                    class="sr-only"
+                >
+                    Buscar lugares
+                </label>
+
+                <input
+                    type="search"
+                    id="search-input"
+                    name="search"
+                    placeholder="O que você está procurando?"
+                    autocomplete="off"
+                >
+
+                <button
+                    id="search-button"
+                    type="submit"
+                >
+                    Buscar
+                </button>
+            </form>
+        </section>
+
+        <section
+            class="categories"
+            aria-labelledby="categories-title"
+        >
+            <h2 id="categories-title">
+                Categorias
+            </h2>
+
+            <div
+                class="category-list"
+                id="category-list"
+            ></div>
+        </section>
+
+        <section
+            class="places"
+            aria-labelledby="places-title"
+        >
+            <div class="places-header">
+
+                <h2 id="places-title">
+                    Lugares próximos
+                </h2>
+
+                <span
+                    id="results-count"
+                    aria-live="polite"
+                >
+                    0 lugares
+                </span>
+
+            </div>
+
+            <div
+                class="cards"
+                id="places-container"
+            ></div>
+
+            <p
+                class="no-results"
+                id="no-results"
+                aria-live="polite"
+                hidden
+            >
+                Nenhum lugar encontrado.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script
+        src="js/script.js"
+        defer
+    ></script>
+
+</body>
+
+</html>
