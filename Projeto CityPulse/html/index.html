@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title> CityPulse </title>
+
+<link rel="icon"type="image/png"href="images/favicon.png">
+
+<link rel="stylesheet"href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <h1> CityPulse </h1>
+
+    <nav aria-label="Navegação principal">
+
+        <a href="#">Início</a>
+        <a href="#">Explorar</a>
+        <a href="#">Categorias</a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="hero"aria-labelledby="hero-title">
+
+        <h2 id="hero-title"> Descubra lugares pela cidade </h2>
+
+        <p> Encontre cafés, espaços de trabalho, parques e lugares interessantes perto de você. </p>
+
+        <form class="search"id="search-form">
+
+            <label for="search-input"class="sr-only"> Buscar lugares </label>
+
+            <input type="search"id="search-input"name="search"placeholder="O que você está procurando?"autocomplete="off">
+
+            <button id="search-button"type="submit"> Buscar </button>
+
+        </form>
+
+    </section>
+
+    <section class="categories"aria-labelledby="categories-title">
+
+        <h2 id="categories-title"> Categorias </h2>
+
+        <div class="category-list">
+
+            <button class="category-button active"data-category="todos"type="button"> Todos </button>
+
+            <button class="category-button"data-category="cafe"type="button"> Cafés </button>
+
+            <button class="category-button"data-category="parque"type="button"> Parques </button>
+
+            <button class="category-button"data-category="coworking"type="button"> Coworking</button>
+
+            <select id="sort-select" aria-label="Ordenar lugares">
+                <option value="default"> Ordenar por </option>
+                <option value="rating-desc"> Maior avaliação </option>
+                <option value="rating-asc"> Menor avaliação </option>
+            </select>
+
+        </div>
+
+    </section>
+
+    <section class="places"aria-labelledby="places-title">
+
+        <div class="places-header">
+
+            <h2 id="places-title"> Lugares próximos </h2>
+
+            <span id="results-count"aria-live="polite"> 3 lugares </span>
+
+        </div>
+
+        <div class="cards"id="places-container"></div>
+
+        <p class="no-results"id="no-results"aria-live="polite"> Nenhum lugar encontrado. </p>
+
+    </section>
+
+</main>
+
+<script src="js/script.js"defer> </script>
+
+</body>
+
+</html>
